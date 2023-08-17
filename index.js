@@ -7,6 +7,7 @@ const methodOverride = require('method-override')
 const catchAsync = require('./utilities/catchasync')
 const { campgroundSchema } = require('./schemas.js')
 
+
 async function main() {
         await mongoose.connect('mongodb://127.0.0.1:27017/yelpCamp')
 }
@@ -81,9 +82,9 @@ app.delete('/campgrounds/:id', catchAsync(async (req, res) => {
 
 }))
 
-app.post('/campgrounds/:id/reviews', catchAsync(async (req, res) => {
+app.post('/campgrounds/:id/reviews', async (req, res) => {
         res.send('You made it!!!')
-}))
+})
 
 
 app.all('*', (req, res, next) => {
