@@ -4,7 +4,7 @@ const cities = require('./cities')
 const { places, descriptors } = require('./seedHelpers')
 
 async function main() {
-        await mongoose.connect('mongodb+srv://Shah:shah1214@cluster0.khnldpa.mongodb.net/?retryWrites=true&w=majority')
+        await mongoose.connect('mongodb+srv://Zain:zain@cluster0.khnldpa.mongodb.net/?retryWrites=true&w=majority')
         console.log('Database connected')
 }
 main().catch(err => console.log(err));
@@ -19,7 +19,7 @@ const seedDB = async () => {
                 const random1000 = Math.floor(Math.random() * 1000);
                 const price = Math.floor(Math.random() * 20 + 10);
                 const camp = new Campground({
-                        author: '6504731b51a702540b042c9e',
+                        author: '64eb30640dab47115d5147d6',
                         location: `${cities[random1000].city}, ${cities[random1000].state}`,
                         title: `${sample(descriptors)} ${sample(places)}`,
                         description: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quis, suscipit aliquam distinctio, sed id voluptates deleniti beatae soluta necessitatibus rerum, atque ea aperiam? Maiores officia vitae minima id minus.`,
